@@ -3,7 +3,7 @@ require_relative "../config/environment.rb"
 class Student
   attr_accessor :name, :grade, :id 
   
-  def initialize(id = nil, name, grade) 
+  def initialize(name, grade, id = nil) 
     @id = id 
     @name = name 
     @grade = grade 
@@ -44,7 +44,7 @@ class Student
   end 
   
   
-  def self.create(name:, grade:)
+  def self.create(name, grade)
     student = self.new(name, grade)
     student.save
     student 
